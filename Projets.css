@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('police/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('police/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2126;
+}
+
+/* ===========================
+   Header 
+   =========================== */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181a1e;
+    padding: 20px 20px;
+    /* color: rgb(0, 0, 0); */
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+}
+
+#181a1e #1E2126 .header-logo img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700px;
+    margin: 0 20px;
+    color: #1F4CA6;
+}
+
+h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1F4CA6;
+    font-size: 1.25rem;
+    padding: 20px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #060E40;
+    color: #ffffff;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+/* ===============Footer============== */
+
+
+footer {
+    background-color: #181a1e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}

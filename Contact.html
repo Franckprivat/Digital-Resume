@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="http://127.0.0.1:5500/Accueil.html">
+                <img width="20%" src="img/FP-bleu.png" alt="logo">
+            </a>
+        </div>
+        <div class="logo">
+            <h1><a href="http://127.0.0.1:5500/Accueil.html">Mon Portefolio</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <h2><a href="http://127.0.0.1:5500/Accueil.html">À propos</a> </h2>
+                </li>
+                <li>
+                    <h2><a href="http://127.0.0.1:5500/Projets.html">Projets</a></h2>
+                </li>
+                <li>
+                    <h2><a href="http://127.0.0.1:5500/Contact.html">Contact</a></h2>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section" id="contact">
+        <h2>Contactez-moi</h2>
+        <form action="votre_script_de_traitement.php" method="POST" class="contact-form">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Sujet :</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+        <a href="https://www.linkedin.com/in/franck-k-35451418a/" target="_blank">
+            <img width="60px" height="50vh" src="img/linked.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Franckprivat" target="_blank">
+            <img width="60px" height="50vh" src="img/GitHub.png" alt="Github">
+        </a>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Franck Kiemde</p>
+    </footer>
+
+</body>

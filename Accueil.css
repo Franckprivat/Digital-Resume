@@ -1,0 +1,477 @@
+/* Importation de la police */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('police/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('police/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/* Réinitialisation de la marge et du padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1E2126;
+}
+
+/* ===========================
+   Header 
+   =========================== */
+/* Général */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181a1e;
+    padding: 20px 20px;
+    /* color: rgb(0, 0, 0); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du logo de l'image */
+.header-logo img {
+    width: 60px;
+    /* Taille ajustée */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.header-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Style pour le nom */
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700px;
+    margin: 0 20px;
+    color: #1F4CA6;
+}
+
+h1 a {
+    text-decoration: none;
+    /* Supprime le soulignement */
+    color: inherit;
+    /* Utilise la couleur du titre */
+}
+
+/* h1 a:hover {
+    color: #0077cc;
+    Change la couleur au survol si désiré 
+} */
+
+
+/* Style pour la navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 0.5s forwards;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1F4CA6;
+    font-size: 1.25rem;
+    padding: 20px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #060E40;
+    color: #ffffff;
+}
+
+/* Animation de l’apparition */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* ===========================
+   Section Intro
+=========================== */
+
+
+
+.Intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    /* border-radius: 10px; */
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #1F4CA6;
+    margin-bottom: 60px;
+}
+
+.intro-text h3 {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.intro-image {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    justify-content: center;
+}
+
+/* Section "Projets" */
+
+/* Style global de la section des projets */
+.projects-section {
+    padding: 40px;
+    background-color: #1E2126;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    color: #1F4CA6;
+    margin-bottom: 50px;
+}
+
+.projects-section h3 {
+    font-size: 1.75rem;
+    color: #fff9f9;
+    margin-bottom: 30px;
+}
+
+/* Style du carrousel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.carousel-items {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 50%;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+/* Effet au survol des images du carrousel */
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Style du lien "Voir plus" */
+.carousel-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button a:hover {
+    background-color: #1F4CA6;
+}
+
+
+/* ==================================== */
+/* Section vidéo */
+/* ==================================== */
+
+
+
+.video-section {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-section h3 {
+    font-size: 1.75rem;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.vid-item video {
+    width: 50%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.video-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.video-button a:hover {
+    background-color: #1F4CA6;
+}
+
+/* Responsivité pour mobile */
+@media (max-width: 768px) {
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel-item {
+        width: 80%;
+    }
+
+    .video-section video {
+        width: 100%;
+    }
+}
+
+/* ============================
+Section Languages Informatiques
+=============================== */
+
+/* Style de la section "Languages Informatiques" */
+.lang-inform {
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.lang-inform h2 {
+    font-size: 2rem;
+    color: #1F4CA6;
+    margin: 50px 100px;
+}
+
+/* Style de la grille des icônes */
+.lang-icons {
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 3fr)); */
+    gap: 20px;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.lang-icons img {
+    width: 100px;
+    height: 15vh;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Effet au survol des icônes */
+.lang-icons img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .lang-inform h2 {
+        font-size: 2.5rem;
+    }
+
+    .lang-icons img {
+        width: 60px;
+    }
+}
+
+/* Style de la section des projets informatiques */
+.projects-info {
+    padding: 40px 40px;
+    background-color: #1E2126;
+    text-align: center;
+}
+
+.projects-info h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    display: inline-block;
+    width: 200px;
+    margin: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.project-card h3 {
+    font-size: 20px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* .project-card p {
+    font-size: 58px;
+    color: #000000;
+} */
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button a:hover {
+    background-color: #1F4CA6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-info {
+        padding: 20px;
+    }
+
+    .project-card {
+        width: 80%;
+        margin: 20px auto;
+    }
+}
+
+/* ===============Footer============== */
+
+
+footer {
+    background-color: #181a1e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}
